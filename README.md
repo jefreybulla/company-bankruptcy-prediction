@@ -41,3 +41,13 @@ pip install --upgrade pip
 ```
 deactivate
 ```
+
+## Using joblib
+`joblib` is used for data processing. You will need the latest version of joblib. As of April 2025 the latest version in 1.5.3. You can check your joblib version with
+```
+pip list 
+```
+Find joblib in the list and check your version. If needed install the latest version with 
+```
+pip install joblib
+```
