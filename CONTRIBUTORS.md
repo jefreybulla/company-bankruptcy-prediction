@@ -20,6 +20,7 @@ git push origin <branch-name-here>
 ```
 - On GitHub.com click on "Create a new Pull Request"
 - For `base` choose `main`. Use your newly created branch in `compare`.
+- Click on "Create pull request"
 
 ## Creating/Editing a notebook
 If your PR includes a Jupyter notebook (`ipynb` file): before opening a PR please export your new or edited notebook to a Python file so all contributors can review the changes from Github directly 
