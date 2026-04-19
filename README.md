@@ -11,7 +11,12 @@ A model to predict whether a company will file for bankruptcy
 - Class = 0 (Does not file for bankrupcy)
 
 ## Project setup 
-## Create Python environment
+### Clone this repository to your machine
+```
+git clone https://github.com/jefreybulla/company-bankruptcy-prediction.git
+```
+
+### Create Python environment
 - Install python 3 if needed.
 - Create environment with 
 ```
