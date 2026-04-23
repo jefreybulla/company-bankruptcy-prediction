@@ -17,4 +17,4 @@ tf-env
 .cache
 *.pyc
 
-/local_models
+/local
