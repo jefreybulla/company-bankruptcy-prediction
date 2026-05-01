@@ -439,6 +439,13 @@ print(classification_report(y, y_pred_cv, target_names=['Non-Bankrupt', 'Bankrup
 # We obtained a recall of the minority class of **1 (100%)** using **eight** features as the input of the stacking model
 
 # %% [markdown]
+# # Final results
+# 
+# | Subgroup ID | Name | Companies | Bankrupt | TT | TF | N_features |
+# |---|---|---|---|---|---|---|
+# | 3 | Jefrey | 1024 | 6 | 6 | 0 | 8 |
+
+# %% [markdown]
 # ## Export Preprocessing Pipeline and Stacking Model
 # 
 # Save the preprocessing pipeline and the fitted stacking model so they can be loaded and used from any other notebook to make predictions.

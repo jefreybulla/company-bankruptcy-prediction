@@ -428,6 +428,13 @@ print(classification_report(y, y_pred_cv, target_names=['Non-Bankrupt', 'Bankrup
 # | 1 | Variance -> 2 & PCA -> 1 | 1 |
 
 # %% [markdown]
+# # Final results
+# 
+# | Subgroup ID | Name | Companies | Bankrupt | TT | TF | N_features |
+# |---|---|---|---|---|---|---|
+# | 2 | Jefrey | 904 | 101 | 101 | 0 | 1 |
+
+# %% [markdown]
 # We obtained a recall of the minority class of **1 (100%)** using **one** feature as the input of the stacking model
 
 # %% [markdown]
