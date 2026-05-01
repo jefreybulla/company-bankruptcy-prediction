@@ -1,15 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Usage for joblib
+# ## How to load the pipeline
 # 
-# `joblib` is used to save and load trained machine learning models efficiently, especially those built with scikit-learn pipelines. It allows you to persist a trained model to disk and reuse it later without retraining.
-# 
-# ### Saving a model
-# ```python
-# import joblib
-# 
-# joblib.dump(pipe, 'model.joblib')
+# - Import the necessary custom class and libraries
+# - Load the joblib file and the data
+# - Run predict() on the data and pipeline
+
+# ## Example
 
 # In[ ]:
 
