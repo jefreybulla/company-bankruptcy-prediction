@@ -30,7 +30,7 @@ np.random.seed(RANDOM_STATE)
 # In[2]:
 
 
-df = pd.read_csv('clusters/cluster_6.csv')
+df = pd.read_csv('../../Clusters/cluster_6.csv')
 df.columns = df.columns.str.strip()
 
 print(f"Shape: {df.shape}")
@@ -219,20 +219,19 @@ print(f"\nSparsity check: {train_preds.sum()} / {len(train_preds)} predicted ban
 # In[10]:
 
 
-import joblib
-# Absolute save path
-save_path = r"C:\Users\Khush\Documents\559 semester -2\559-project\Stacked_Models\c6_stacking_model.joblib"
 c6_model = {
     'cluster_id': 6,
     'feature_cols': SELECTED_FEATURES,
     'model': final_pipeline,
+    'threshold': 0.5,
     'n_train': len(y),
     'n_bankrupt': int(y.sum()),
-    'note': 'LOO stacking — LR + DTree(d=1) + KNN(k=1) → LR meta'
+    'note': 'LOO stacking -- LR + DTree(d=1) + KNN(k=1) -> LR meta'
 }
-joblib.dump(c6_model, save_path)
+joblib.dump(c6_model, 'c6_stacking_model.joblib')
+print("Saved: c6_stacking_model.joblib")
 # Reload test
-loaded = joblib.load(save_path)
+loaded = joblib.load('c6_stacking_model.joblib')
 test_preds = loaded['model'].predict(X[loaded['feature_cols']])
 assert list(test_preds) == list(train_preds), "Reload mismatch!"
 print("Reload test passed — predictions match.")

@@ -36,7 +36,7 @@ print("All imports successful.")
 # In[2]:
 
 
-df = pd.read_csv('Clusters/cluster_0.csv')
+df = pd.read_csv('../../Clusters/cluster_0.csv')
 df.columns = df.columns.str.strip()
 
 print(f"Shape: {df.shape}")
@@ -341,12 +341,11 @@ c0_model = {
     'note':          'SMOTE + Stacking (LR+RF+GBM+SVC) → LR meta, threshold-tuned'
 }
 
-save_path = r'C:\Users\Khush\Documents\559 semester -2\559-project\Stacked_Models\c0_stacking_model.joblib'
-joblib.dump(c0_model, save_path)
-print(f"Saved: {save_path}")
+joblib.dump(c0_model, 'c0_stacking_model.joblib')
+print("Saved: c0_stacking_model.joblib")
 
 # Reload test
-loaded = joblib.load(save_path)
+loaded = joblib.load('c0_stacking_model.joblib')
 test_probs = loaded['model'].predict_proba(X[loaded['feature_cols']])[:, 1]
 test_preds = (test_probs >= loaded['threshold']).astype(int)
 assert list(test_preds) == list(train_preds), "Reload mismatch!"
