@@ -290,7 +290,7 @@ for i, feature in enumerate(dropped_features, 1):
 
 from sklearn.decomposition import PCA
 
-n_components = 8
+n_components = 15
 
 # Apply sklearn PCA
 sklearn_pca = PCA(n_components=n_components, random_state=42)
@@ -426,24 +426,25 @@ print(classification_report(y, y_pred_cv, target_names=['Non-Bankrupt', 'Bankrup
 # | 41 | Variance filter | 1 |
 # | 14 | Variance filter | 0 |
 # | 4 | Variance filter | 0 |
-# | 2 | Variance -> 41 & PCA -> 24 | 1 |
+# | 24 | Variance -> 41 & PCA -> 24 | 1 |
 # | 12 | Variance -> 41 & PCA -> 12 | 1 |
 # | 9 | Variance -> 41 & PCA -> 9 | 1 |
 # | 8 | Variance -> 41 & PCA -> 8 | 1 |
+# | 15 | PCA | 1 |
 # | 8 | PCA | 1 |
 # | 7 | PCA | 0.3 |
 # | 7 | Variance -> 41 & PCA -> 7 | 0 |
 # | 6 | Variance -> 41 & PCA -> 6 | 0 |
 
 # %% [markdown]
-# We obtained a recall of the minority class of **1 (100%)** using **eight** features as the input of the stacking model
+# We obtained a recall of the minority class of **1 (100%)** using **15** features as the input of the stacking model
 
 # %% [markdown]
 # # Final results
 # 
 # | Subgroup ID | Name | Companies | Bankrupt | TT | TF | N_features |
 # |---|---|---|---|---|---|---|
-# | 3 | Jefrey | 1024 | 6 | 6 | 0 | 8 |
+# | 3 | Jefrey | 1024 | 6 | 6 | 0 | 15 |
 
 # %% [markdown]
 # ## Export Preprocessing Pipeline and Stacking Model
