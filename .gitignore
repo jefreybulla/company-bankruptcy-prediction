@@ -10,6 +10,9 @@ tf-env
 *:Zone.Identifier
 .DS_Store
 
+*.docx
+*.zip
+
 # Secrets
 .env
 
