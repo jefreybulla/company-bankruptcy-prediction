@@ -3,8 +3,7 @@ A model to predict whether a company will file for bankruptcy
 
 ## Model features
 - Original number of features: 95
-- Reduced number of features before clustering: TBD
-- Reduced features in stack models: each ensemble may use different number of features
+- Reduced features in stacking models: each ensemble implements dimentionally reduction using different approaches
 
 ## Model target
 - Class = 1 (File for bankrupcy)
